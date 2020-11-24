@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "334437460866",
+    "firebase_url": "https://cmsmobileapp.firebaseio.com",
+    "project_id": "cmsmobileapp",
+    "storage_bucket": "cmsmobileapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334437460866:android:a262ec49bb996465f13d9b",
+        "android_client_info": {
+          "package_name": "com.cms.callmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334437460866-oba8dieu9nqc6bnt465kfmts8hmj85cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkbsfppfMq8x6ECH3BDoNS7bd4_AsExCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334437460866-oba8dieu9nqc6bnt465kfmts8hmj85cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

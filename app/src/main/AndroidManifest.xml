@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cms.callmanager">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+-->
+
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".fcm_notification.Notification_list"></activity>
+        <activity android:name=".activities.ChangePasswordActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RepairDetailsActivity"
+            android:label="Repair Details" />
+        <activity
+            android:name=".multispinner.CallClloserActivity"
+            android:label="Call Closure" />
+        <activity
+            android:name=".multispinner.QuestionairActivity"
+            android:theme="@style/AppDialogTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".AttachImageActivity"
+            android:label="Attach Image" />
+        <activity
+            android:name=".AcknowledgementActivity"
+            android:label="Acknowledgement" />
+        <activity
+            android:name=".NearestATMActivity"
+            android:label="Nearest ATM"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CallDetailsActivity"
+            android:label="Call Details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".searchCallActivity"
+            android:label="Search Call"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".Foc_Chargeble.FOC_CHARGE_Activity"
+            android:exported="true"
+            android:theme="@style/AppDialogTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <!--
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+        android:theme="@style/Base.Theme.AppCompat" />
+        -->
+       <!-- <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCKxIChv9ZUeCGL3fW9lZVW6qpMAx2zz9k" />-->
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AttachmentViewActivity"
+            android:label="@string/title_activity_attachment_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RejectedCallList"
+            android:label="Rejected Calls"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service android:name=".services.GPSTracker" />
+
+        <activity
+            android:name=".activities.InvTrasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.StockTransActivity"
+            android:label="@string/title_activity_stock_trans"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".activities.CreateTransferOrderActivity"
+            android:label="@string/title_activity_replacement_item" />
+        <activity
+            android:name=".activities.GoodHubActivity"
+            android:label="@string/title_activity_good_hub"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.DefectiveHubActivity"
+            android:label="@string/title_activity_defective_hub"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ReplacementDetailsActivity"
+            android:label="@string/consumption_for_replacement_items" />
+        <activity
+            android:name=".activities.ReplacementItemActivity"
+            android:label="@string/title_activity_replacement_item"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.StockTransferDetailActivity"
+            android:label="@string/inventory_to_be_received_stock_transfer"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".activities.CreateReplacementActivity" />
+        <activity android:name=".activities.DemoActivity" />
+        <activity
+            android:name=".activities.GoodDetailsActivity"
+            android:label="@string/title_activity_good_hub" />
+        <activity
+            android:name=".activities.DefectiveDetailsActivity"
+            android:label="@string/title_activity_defective_hub" />
+
+
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/app_name" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/common_google_signin_btn_text_dark" />
+
+
+
+        <!-- Firebase Notifications -->
+        <service
+            android:name=".fcm_notification.firebase.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".fcm_notification.firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+
+        <service android:name=".background.MJobShedular"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true">
+        </service>
+
+
+
+
+    </application>
+
+</manifest>

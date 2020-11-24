@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_no_call_for_atm"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/dp_10"
+            android:foregroundGravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dailoge_rv"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/dialogButtonOK"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/dailoge_rv"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@color/colorPink"
+        android:text="Ok"
+        android:textColor="@color/white"
+        android:textSize="18sp">
+
+    </Button>
+
+
+</LinearLayout>
